@@ -1,5 +1,3 @@
- // Line Follower Robot
-
 int ENA = 5;  //speed motor a
 int M_A1 = 6; //motor a = +
 int M_A2 = 7; //motor a = -
@@ -9,7 +7,12 @@ int ENB = 10;  //speed motor b
 int R_S = A0; //sensor R
 int S_S = A1; //sensor S
 int L_S = A2; //sensor L
-
+void forword();
+void sharpRturn();
+void turnRight();
+void sharpLturn();
+void turnLeft();
+void Stop();
 void setup()
 {
 pinMode(M_B1, OUTPUT);
@@ -32,7 +35,7 @@ if ((digitalRead(L_S) == 1)&&(digitalRead(S_S) == 1)&&(digitalRead(R_S) == 0)){s
 if ((digitalRead(L_S) == 1)&&(digitalRead(S_S) ==0)&&(digitalRead(R_S) == 0)) {turnLeft();}
 if ((digitalRead(L_S) ==0)&&(digitalRead(S_S) == 1)&&(digitalRead(R_S) == 1)){sharpRturn();}
 if ((digitalRead(L_S) == 0)&&(digitalRead(S_S) == 0)&&(digitalRead(R_S) == 1)){turnRight();}
-if ((digitalRead(L_S) == 1)&&(digitalRead(S_S) == 1)&&(digitalRead(R_S) == 1)){forward();}
+if ((digitalRead(L_S) == 1)&&(digitalRead(S_S) == 1)&&(digitalRead(R_S) == 1)){forword();}
 }
 void forword(){
 digitalWrite(M_A1, HIGH);
