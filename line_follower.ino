@@ -16,13 +16,13 @@ pinMode(M_B1, OUTPUT);
 pinMode(M_B2, OUTPUT);
 pinMode(M_A1, OUTPUT);
 pinMode(M_A2, OUTPUT);
-pinMode(S_B, OUTPUT);
-pinMode(S_A, OUTPUT);
+pinMode(ENB, OUTPUT);
+pinMode(ENA, OUTPUT);
 pinMode(L_S, INPUT);
 pinMode(S_S, INPUT);
 pinMode(R_S, INPUT);
-analogWrite(S_A, 230);
-analogWrite(S_B, 230);
+analogWrite(ENA, 230);
+analogWrite(ENB, 230);
 delay(200);
 }
 void loop()
